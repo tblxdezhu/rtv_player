@@ -13,11 +13,11 @@ for filename in filenames:
 	#filepath = os.sep.join([input_path, filename])
 	#print filepath
 	print filename
-  shotname = os.path.splitext(filename)
+  	shotname = os.path.splitext(filename)
 	print shotname[0],shotname[1]
     	
 	img = cv2.imread(filename)
-  text = shotname[0]
+ 	text = shotname[0]
 	cv2.putText(img, text, (1100,50), 0, 1.5, (0,0,255),2)
 	cv2.namedWindow("Image")
 	cv2.imshow("Image",img)
